@@ -41,8 +41,9 @@ def reliefF(X, y, **kwargs):
     score = np.zeros(n_features)
 
     # the number of sampled instances is equal to the number of total instances
+    generator = np.random.RandomState(seed=1)
     for iter in range(n_samples):
-        idx = randrange(0, n_samples, 1)
+        idx = generator.randint(0, n_samples)
         near_hit = []
         near_miss = dict()
 

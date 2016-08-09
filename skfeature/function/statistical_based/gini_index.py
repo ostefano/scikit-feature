@@ -37,7 +37,7 @@ def gini_index(X, y):
             gini_left = 0
             gini_right = 0
 
-            for k in range(np.min(y), np.max(y)+1):
+            for k in range(int(np.min(y)), int(np.max(y))+1):
                 if len(left_y) != 0:
                     # t1_left is probability of occurrence of k in left_y
                     t1_left = np.true_divide(len(left_y[left_y == k]), len(left_y))
